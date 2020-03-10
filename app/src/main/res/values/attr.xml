@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="toolbar">
+        <attr name="title" format="string"></attr>
+        <attr name="subtitle" format="string"></attr>
+        <attr name="left_btn" format="reference"></attr>
+        <attr name="right_btn1" format="reference"></attr>
+        <attr name="right_btn2" format="reference"></attr>
+        <attr name="is_show_wea" format="boolean"></attr>
+        <attr name="right_btn" format="reference"></attr>
+        <attr name="input_hint" format="string"></attr>
+        <attr name="is_show_right" format="boolean"></attr>
+    </declare-styleable>
+
+    <declare-styleable name="nav_item">
+        <attr name="src" format="reference"></attr>
+        <attr name="text" format="string"></attr>
+        <attr name="gravity" format="string" />
+        <attr name="layout_padding_top" format="dimension" />
+        <attr name="layout_padding_bottom" format="dimension" />
+        <attr name="layout_padding_left" format="dimension" />
+        <attr name="layout_padding_right" format="dimension" />
+        <attr name="imageview_size" format="dimension" />
+        <attr name="textview_padding_left" format="dimension" />
+        <attr name="textsize" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="key_value">
+        <attr name="key_txt" format="string"></attr>
+        <attr name="value_txt" format="string"></attr>
+        <attr name="key_color" format="color"></attr>
+        <attr name="value_color" format="color"></attr>
+        <attr name="text_size" format="dimension"></attr>
+        <attr name="key_width" format="dimension"></attr>
+    </declare-styleable>
+
+    <declare-styleable name="PlayPauseView">
+        <attr name="bg_color" format="color" />
+        <attr name="btn_color" format="color" />
+        <attr name="gap_width" format="dimension|reference" />
+        <attr name="space_padding" format="dimension|reference" />
+        <attr name="anim_duration" format="integer" />
+        <attr name="anim_direction">
+            <enum name="positive" value="1" />
+            <enum name="negative" value="2" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="LyricView">
+        <attr name="lrcTextSize" format="dimension" />
+        <attr name="lrcNormalTextSize" format="dimension" />
+        <attr name="lrcDividerHeight" format="dimension" />
+        <attr name="lrcNormalTextColor" format="reference|color" />
+        <attr name="lrcCurrentTextColor" format="reference|color" />
+        <attr name="lrcTimelineTextColor" format="reference|color" />
+        <attr name="lrcAnimationDuration" format="integer" />
+        <attr name="lrcLabel" format="string" />
+        <attr name="lrcPadding" format="dimension" />
+        <attr name="lrcTimelineColor" format="reference|color" />
+        <attr name="lrcTimelineHeight" format="dimension" />
+        <attr name="lrcPlayDrawable" format="reference" />
+        <attr name="lrcTimeTextColor" format="reference|color" />
+        <attr name="lrcTimeTextSize" format="dimension" />
+        <attr name="lrcTextGravity">
+            <enum name="center" value="0" />
+            <enum name="left" value="1" />
+            <enum name="right" value="2" />
+        </attr>
+    </declare-styleable>
+</resources>

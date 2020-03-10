@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/layout_now"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/tv_tmp"
+            style="@style/textShadow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="-20dp"
+            android:fontFamily="sans-serif-thin"
+            android:text="N°C"
+            android:textColor="@color/colorWhite"
+            android:textSize="90sp" />
+
+        <ImageView
+            android:id="@+id/iv_cond"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_above="@id/tv_cond"
+            android:src="@drawable/h999"
+            android:tint="@color/colorWhite" />
+
+        <TextView
+            android:id="@+id/tv_cond"
+            style="@style/textShadow"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/tv_tmp"
+            android:gravity="center"
+            android:text="N"
+            android:textColor="@color/colorWhite"
+            android:textSize="16sp" />
+
+        <LinearLayout
+            android:id="@+id/layout_theme"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/bg_wea_theme"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:src="@drawable/ic_night" />
+
+            <TextView
+                android:id="@+id/tv_theme"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="白天"
+                android:textColor="@color/colorWhite"
+                android:textSize="10sp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorGraye0" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_hourly"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:overScrollMode="never">
+
+    </android.support.v7.widget.RecyclerView>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_forecast"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:overScrollMode="never">
+
+    </android.support.v7.widget.RecyclerView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorGraye0" />
+
+    <TextView
+        style="@style/textShadow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:layout_margin="10dp"
+        android:text="空气质量"
+        android:textColor="@color/colorWhite"
+        android:textSize="16sp" />
+
+    <include layout="@layout/weather_qlty" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorGraye0" />
+
+    <TextView
+        style="@style/textShadow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:layout_margin="10dp"
+        android:text="舒适度"
+        android:textColor="@color/colorWhite"
+        android:textSize="16sp" />
+
+    <include layout="@layout/weather_cft" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorGraye0" />
+
+    <TextView
+        style="@style/textShadow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:layout_margin="10dp"
+        android:text="风速风力"
+        android:textColor="@color/colorWhite"
+        android:textSize="16sp" />
+
+    <include layout="@layout/weather_wind" />
+
+</LinearLayout>

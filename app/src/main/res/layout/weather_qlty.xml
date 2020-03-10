@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <com.xu.xmaster.views.KeyValueView
+            android:id="@+id/kvv_qlty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:key_txt="空气质量"
+            app:key_width="65dp"
+            app:text_size="14sp"
+            app:value_txt="N">
+
+        </com.xu.xmaster.views.KeyValueView>
+
+        <com.czp.library.ArcProgress
+            android:id="@+id/ap_aqi"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginTop="5dp"
+            android:max="500"
+            android:progress="0"
+            app:borderWidth="7dp"
+            app:degree="90"
+            app:progressColor="@color/colorWhite"
+            app:progressStyle="arc"
+            app:radius="60dp"
+            app:unprogresColor="@color/colorGray80" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:paddingLeft="30dp">
+
+        <com.xu.xmaster.views.KeyValueView
+            android:id="@+id/kvv_pm10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:key_txt="PM10"
+            app:key_width="65dp"
+            app:text_size="14sp"
+            app:value_txt="N">
+
+        </com.xu.xmaster.views.KeyValueView>
+
+        <com.xu.xmaster.views.KeyValueView
+            android:id="@+id/kvv_pm25"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:key_txt="PM2.5"
+            app:key_width="65dp"
+            app:text_size="14sp"
+            app:value_txt="N">
+
+        </com.xu.xmaster.views.KeyValueView>
+
+        <com.xu.xmaster.views.KeyValueView
+            android:id="@+id/kvv_no2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:key_txt="二氧化氮"
+            app:key_width="65dp"
+            app:text_size="14sp"
+            app:value_txt="N">
+
+        </com.xu.xmaster.views.KeyValueView>
+
+        <com.xu.xmaster.views.KeyValueView
+            android:id="@+id/kvv_so2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:key_txt="二氧化硫"
+            app:key_width="65dp"
+            app:text_size="14sp"
+            app:value_txt="N">
+
+        </com.xu.xmaster.views.KeyValueView>
+
+        <com.xu.xmaster.views.KeyValueView
+            android:id="@+id/kvv_co"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:key_txt="一氧化碳"
+            app:key_width="65dp"
+            app:text_size="14sp"
+            app:value_txt="N">
+
+        </com.xu.xmaster.views.KeyValueView>
+
+        <com.xu.xmaster.views.KeyValueView
+            android:id="@+id/kvv_o3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:key_txt="臭氧"
+            app:key_width="65dp"
+            app:text_size="14sp"
+            app:value_txt="N">
+
+        </com.xu.xmaster.views.KeyValueView>
+
+    </LinearLayout>
+
+</LinearLayout>

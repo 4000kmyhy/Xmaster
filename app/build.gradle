@@ -1,0 +1,120 @@
+apply plugin: 'com.android.application'
+
+def mVersionCode = getVersionCode()
+def mVersionName = getVersionName()
+
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "com.xu.xmaster"
+        minSdkVersion 22
+        targetSdkVersion 28
+        versionCode mVersionCode
+        versionName mVersionName
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        ndk {
+            abiFilters "armeabi-v7a"
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    applicationVariants.all { variant ->
+        variant.outputs.all {
+            outputFileName = "Xmaster-${defaultConfig.versionName}.apk"
+        }
+    }
+
+    //过滤重复依赖文件
+    packagingOptions {
+        exclude 'META-INF/proguard/androidx-annotations.pro'
+    }
+    compileOptions {
+        sourceCompatibility = '1.8'
+        targetCompatibility = '1.8'
+    }
+}
+
+
+def getVersionCode() {// 获取版本号
+    def versionFile = file('version.properties')// 读取第一步新建的文件
+    if (versionFile.canRead()) {// 判断文件读取异常
+        Properties versionProps = new Properties()
+        versionProps.load(new FileInputStream(versionFile))
+        def versionCode = versionProps['VERSION_CODE'].toInteger()// 读取文件里面的版本号
+        def runTasks = gradle.startParameter.taskNames
+        if (':app:assembleRelease' in runTasks || ':app:assembleDebug' in runTasks) {
+            //仅在assembleRelease任务是增加版本号,其他渠道包在此分别配置
+            // 版本号自增之后再写入文件（此处是关键，版本号自增+1）
+            versionProps['VERSION_CODE'] = (++versionCode).toString()
+            versionProps.store(versionFile.newWriter(), null)
+        }
+        return versionCode // 返回自增之后的版本号
+    } else {
+        throw new GradleException("Could not find version.properties!")
+    }
+}
+
+def getVersionName() {
+    def versionFile = file('version.properties')
+    if (versionFile.canRead()) {
+        Properties versionProps = new Properties()
+        versionProps.load(new FileInputStream(versionFile))
+        def versionCode = versionProps['VERSION_CODE'].toInteger()
+        def versionName = "v" + versionCode / 10;
+        return versionName // 返回版本名
+    } else {
+        throw new GradleException("Could not find version.properties!")
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    implementation 'com.android.support:design:28.0.0'
+    //cardview
+    implementation 'com.android.support:cardview-v7:28.0.0'
+    //QMUI
+    implementation 'com.qmuiteam:qmui:1.4.4'
+    //swipebacklayout
+    implementation project(':swipeback')
+    //okhttp
+    implementation 'com.squareup.okhttp3:okhttp:3.12.0'
+    //glide
+    implementation 'com.github.bumptech.glide:glide:4.9.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.9.0'
+    implementation 'jp.wasabeef:glide-transformations:4.1.0'
+    //recyclerview
+    implementation 'com.android.support:recyclerview-v7:28.0.0'
+    //滚动选择器
+    implementation 'com.wx.wheelview:wheelview:1.3.3'
+    //rxbinding
+    implementation 'com.jakewharton.rxbinding3:rxbinding:3.0.0'
+    //科大讯飞语音
+    implementation files('src/main/jniLibs/Msc.jar')
+    //图片浏览器
+    implementation 'com.github.maning0303:MNImageBrowser:V1.2.4'
+    //播放器
+    implementation project(':XXPlayer')
+    //tablayout
+    implementation 'com.flyco.tablayout:FlycoTabLayout_Lib:2.1.2@aar'
+    //RefreshLayout
+    implementation 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.0'
+    implementation 'com.scwang.smartrefresh:SmartRefreshHeader:1.1.0'
+    //腾讯x5webview
+    implementation files('src/main/jniLibs/tbs_sdk.jar')
+    //弧形进度条
+    implementation 'com.czp.arcProgressBar:ArcProgressBar:1.0.1'
+    //和风天气
+    implementation files('src/main/jniLibs/HeWeather.jar')
+    implementation 'com.google.code.gson:gson:2.6.2'
+    //圆形图片
+    implementation 'de.hdodenhof:circleimageview:3.0.1'
+}

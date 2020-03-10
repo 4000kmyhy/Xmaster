@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorDefault">
+
+    <com.xu.xmaster.views.SimpleToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorBlue"
+        app:left_btn="@drawable/ic_clear"
+        app:right_btn1="@drawable/ic_more_horiz">
+
+    </com.xu.xmaster.views.SimpleToolbar>
+
+    <com.xu.xmaster.views.X5WebView
+        android:id="@+id/webView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar"
+        android:overScrollMode="never">
+
+    </com.xu.xmaster.views.X5WebView>
+
+    <ProgressBar
+        android:id="@+id/pb_loading"
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_below="@+id/toolbar"
+        android:max="100"
+        android:progress="0"
+        android:visibility="gone" />
+
+</RelativeLayout>

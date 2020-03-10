@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/iv_thumb"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:visibility="visible" />
+
+    <include layout="@layout/topbar" />
+
+    <include layout="@layout/bottombar" />
+
+    <LinearLayout
+        android:id="@+id/layout_playback"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="horizontal"
+        android:visibility="visible">
+
+        <Button
+            android:id="@+id/btn_replay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:background="@drawable/btn_pressed"
+            android:drawableLeft="@drawable/ic_refresh"
+            android:padding="10dp"
+            android:text="重新播放"
+            android:textColor="#ffffff"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/btn_playnext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:background="@drawable/btn_pressed"
+            android:drawableLeft="@drawable/ic_next"
+            android:padding="10dp"
+            android:text="播放下集"
+            android:textColor="#ffffff"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/layout_position"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center">
+
+        <ProgressBar
+            android:id="@+id/pb_position"
+            style="@android:style/Widget.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:max="100"
+            android:progress="20"
+            android:progressDrawable="@drawable/circle_progressbar_style" />
+
+        <TextView
+            android:id="@+id/tv_position"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="00:00"
+            android:textColor="#ffffff"
+            android:textSize="22sp" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/layout_brightness"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center">
+
+        <ProgressBar
+            android:id="@+id/pb_brightness"
+            style="@android:style/Widget.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:max="100"
+            android:progress="20"
+            android:progressDrawable="@drawable/circle_progressbar_style" />
+
+        <ImageView
+            android:id="@+id/iv_brightness"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="center"
+            android:layout_marginRight="16dp"
+            android:src="@drawable/ic_brightness" />
+
+        <TextView
+            android:id="@+id/tv_brightness"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="16dp"
+            android:gravity="center"
+            android:text="100%"
+            android:textColor="#ffffff"
+            android:textSize="16sp" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/layout_volume"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center">
+
+        <ProgressBar
+            android:id="@+id/pb_volume"
+            style="@android:style/Widget.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:max="100"
+            android:progress="20"
+            android:progressDrawable="@drawable/circle_progressbar_style" />
+
+        <ImageView
+            android:id="@+id/iv_volume"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="center"
+            android:layout_marginRight="16dp"
+            android:src="@drawable/ic_volume" />
+
+        <TextView
+            android:id="@+id/tv_volume"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="16dp"
+            android:gravity="center"
+            android:text="100%"
+            android:textColor="#ffffff"
+            android:textSize="16sp" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_float"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical|right"
+        android:layout_marginRight="10dp"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/iv_capture"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/btn_pressed"
+            android:padding="10dp"
+            android:src="@drawable/ic_screenshot" />
+
+        <ImageView
+            android:id="@+id/iv_lock"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/btn_pressed"
+            android:padding="10dp"
+            android:src="@drawable/ic_unlock" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/layout_screenshot"
+        android:layout_width="160dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center_vertical|right"
+        android:layout_marginRight="60dp"
+        android:background="@drawable/bg_screenshot"
+        android:padding="2dp"
+        android:visibility="gone">
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:cardCornerRadius="10dp"
+            app:cardUseCompatPadding="false">
+
+            <ImageView
+                android:id="@+id/iv_screenshot"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/head" />
+
+        </android.support.v7.widget.CardView>
+
+    </FrameLayout>
+
+    <ImageView
+        android:id="@+id/iv_start"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:background="@drawable/circlebtn_pressed"
+        android:padding="10dp"
+        android:src="@drawable/ic_play"
+        android:visibility="visible" />
+
+    <ProgressBar
+        android:id="@+id/pb_loading"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:background="@drawable/circlebtn_pressed"
+        android:indeterminateDrawable="@drawable/rotate_progress"
+        android:padding="10dp"
+        android:visibility="visible" />
+
+    <!--弹出菜单-->
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_video"
+        android:layout_width="250dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="right|bottom"
+        android:background="#b0000000"
+        android:overScrollMode="never"
+        android:visibility="gone">
+
+    </android.support.v7.widget.RecyclerView>
+
+    <include layout="@layout/right_menu" />
+
+</FrameLayout>

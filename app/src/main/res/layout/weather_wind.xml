@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+    <FrameLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+
+        <View
+            android:layout_width="3dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center_horizontal|bottom"
+            android:background="@color/colorGrayc0" />
+
+        <ImageView
+            android:id="@+id/iv_wind"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10dp"
+            android:src="@drawable/ic_windmill" />
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:paddingLeft="30dp">
+
+        <com.xu.xmaster.views.KeyValueView
+            android:id="@+id/kvv_wind_dir"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:key_txt="风向"
+            app:key_width="36dp"
+            app:text_size="14sp"
+            app:value_txt="N">
+
+        </com.xu.xmaster.views.KeyValueView>
+
+        <com.xu.xmaster.views.KeyValueView
+            android:id="@+id/kvv_wind_deg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:key_txt="角度"
+            app:key_width="36dp"
+            app:text_size="14sp"
+            app:value_txt="N">
+
+        </com.xu.xmaster.views.KeyValueView>
+
+        <com.xu.xmaster.views.KeyValueView
+            android:id="@+id/kvv_wind_sc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:key_txt="风力"
+            app:key_width="36dp"
+            app:text_size="14sp"
+            app:value_txt="N">
+
+        </com.xu.xmaster.views.KeyValueView>
+
+        <com.xu.xmaster.views.KeyValueView
+            android:id="@+id/kvv_wind_spd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:key_txt="风速"
+            app:key_width="36dp"
+            app:text_size="14sp"
+            app:value_txt="N">
+
+        </com.xu.xmaster.views.KeyValueView>
+
+    </LinearLayout>
+
+</LinearLayout>

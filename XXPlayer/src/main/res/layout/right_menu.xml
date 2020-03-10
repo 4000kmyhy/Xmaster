@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/sv_menu"
+    android:layout_width="320dp"
+    android:layout_height="match_parent"
+    android:layout_gravity="right|bottom"
+    android:background="#b0000000"
+    android:overScrollMode="never"
+    android:scrollbars="none"
+    android:visibility="gone">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="15dp"
+        android:paddingTop="30dp"
+        android:paddingRight="15dp"
+        android:paddingBottom="30dp">
+
+        <LinearLayout
+            android:id="@+id/layout_mirror"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/menu_btn_pressed"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="5dp">
+
+            <ImageView
+                android:id="@+id/iv_mirror"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_mirror_off" />
+
+            <TextView
+                android:id="@+id/tv_mirror"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="镜像翻转"
+                android:textColor="@color/colorWhite"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_antirotate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_toRightOf="@id/layout_mirror"
+            android:background="@drawable/menu_btn_pressed"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="5dp">
+
+            <ImageView
+                android:id="@+id/iv_antirotate"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:scaleX="-1"
+                android:src="@drawable/ic_rotate" />
+
+            <TextView
+                android:id="@+id/tv_antirotate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="逆时针旋转"
+                android:textColor="@color/colorWhite"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_rotate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_toRightOf="@id/layout_antirotate"
+            android:background="@drawable/menu_btn_pressed"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="5dp">
+
+            <ImageView
+                android:id="@+id/iv_rotate"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_rotate" />
+
+            <TextView
+                android:id="@+id/tv_rotate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="顺时针旋转"
+                android:textColor="@color/colorWhite"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_speed_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/layout_mirror"
+            android:layout_marginTop="30dp"
+            android:text="播放速度"
+            android:textColor="#ccc"
+            android:textSize="14sp" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_speed"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_speed_title"
+            android:layout_marginTop="5dp"
+            android:overScrollMode="never">
+
+        </android.support.v7.widget.RecyclerView>
+
+        <TextView
+            android:id="@+id/tv_scale_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rv_speed"
+            android:layout_marginTop="30dp"
+            android:text="画面尺寸"
+            android:textColor="#ccc"
+            android:textSize="14sp" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_scale"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_scale_title"
+            android:layout_marginTop="5dp"
+            android:overScrollMode="never">
+
+        </android.support.v7.widget.RecyclerView>
+
+        <TextView
+            android:id="@+id/tv_mode_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rv_scale"
+            android:layout_marginTop="30dp"
+            android:text="播放方式"
+            android:textColor="#ccc"
+            android:textSize="14sp" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_mode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_mode_title"
+            android:layout_marginTop="5dp"
+            android:overScrollMode="never">
+
+        </android.support.v7.widget.RecyclerView>
+    </RelativeLayout>
+
+</ScrollView>

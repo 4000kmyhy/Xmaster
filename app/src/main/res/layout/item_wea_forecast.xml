@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:foreground="?attr/selectableItemBackground">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorGraye0" />
+
+    <TextView
+        android:id="@+id/item_time"
+        style="@style/textShadow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:text="N月N日 星期N"
+        android:textColor="@color/colorWhite"
+        android:textSize="14sp" />
+
+    <ImageView
+        android:id="@+id/item_img_d"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/item_slash"
+        android:src="@drawable/h999"
+        android:tint="@color/colorWhite" />
+
+    <TextView
+        android:id="@+id/item_slash"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:text="/"
+        android:textColor="@color/colorGraye0"
+        android:textSize="14sp" />
+
+    <ImageView
+        android:id="@+id/item_img_n"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/item_slash"
+        android:src="@drawable/h999"
+        android:tint="@color/colorGraye0" />
+
+    <TextView
+        android:id="@+id/item_tmp"
+        style="@style/textShadow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dp"
+        android:text="N°C / N°C"
+        android:textColor="@color/colorWhite"
+        android:textSize="14sp" />
+
+</RelativeLayout>

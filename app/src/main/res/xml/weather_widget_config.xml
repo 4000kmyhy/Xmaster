@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<appwidget-provider xmlns:android="http://schemas.android.com/apk/res/android"
+    android:minWidth="250dp"
+    android:minHeight="110dp"
+    android:initialLayout="@layout/weather_widget"
+    android:previewImage="@mipmap/ic_widget_wea"
+    android:updatePeriodMillis="1800000">
+
+    <!-- dp 方格数*70-30 -->
+
+</appwidget-provider>
