@@ -1,5 +1,4 @@
 # xmaster
-</br>
 第一次尝试提交项目到github。
 </br>
 做了一个集合了新闻、天气预报、音乐、翻译等等功能的APP。用了许多大神的开源库，和大厂的免费接口，总算把这些功能整合到了一个APP中。
@@ -20,14 +19,12 @@ APP用了腾讯QMUI框架作为基本框架，BaseActivity继承了[SwipeBackFra
 <img src="https://github.com/xuyiyiyi/xmaster/raw/master/screenshot/p4.jpg" width="150"/>
 </br>
 ## 新闻
-</br>
 首页是网易新闻（平时不看新闻的我开始天天看新闻），点击新闻打开一个WebView，用的是腾讯的X5webview。
 </br>
 <img src="https://github.com/xuyiyiyi/xmaster/raw/master/screenshot/news.jpg" width="250"/>
 <img src="https://github.com/xuyiyiyi/xmaster/raw/master/screenshot/webview.jpg" width="250"/>
 </br>
 ## 音乐
-</br>
 音乐用了QQ音乐的音乐排行榜接口和搜索接口，歌词控件用的是[lrcview](https://github.com/wangchenyan/lrcview)。
 </br>
 <img src="https://github.com/xuyiyiyi/xmaster/raw/master/screenshot/music.jpg" width="200"/>
@@ -42,13 +39,11 @@ APP用了腾讯QMUI框架作为基本框架，BaseActivity继承了[SwipeBackFra
 <img src="https://github.com/xuyiyiyi/xmaster/raw/master/screenshot/widget.jpg" width="250"/>
 </br>
 ## 天气预报
-</br>
 天气预报用的和风天气的sdk，有实时天气、逐小时预报、七天预报、空气质量、城市搜索等等数据。
 </br>
 <img src="https://github.com/xuyiyiyi/xmaster/raw/master/screenshot/weather.jpg" width="250"/>
 </br>
 ## 翻译
-</br>
 翻译是很久以前做的了，用的是百度翻译的接口，加入了科大讯飞语音输入和输出。
 </br>
 <img src="https://github.com/xuyiyiyi/xmaster/raw/master/screenshot/translate.jpg" width="250"/>
