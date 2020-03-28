@@ -92,6 +92,7 @@ public abstract class BasePlayerView extends FrameLayout implements IPlayer, IPl
     public BasePlayerView(Context context, AttributeSet attrs) {
         super(context, attrs);
 
+        XXPlayerManager.instance().setCurrentPlayer(this);
         mAudioManager = (AudioManager) getContext().getSystemService(AUDIO_SERVICE);
     }
 
@@ -208,7 +209,6 @@ public abstract class BasePlayerView extends FrameLayout implements IPlayer, IPl
     public void start() {
         Log.d(TAG, "start: ");
         if (isIdle()) {
-            XXPlayerManager.instance().setCurrentPlayer(this);
             initPlayer();
             startPrepare();
             setKeepScreenOn(true);
